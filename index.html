@@ -30,6 +30,7 @@
 </head>
 
 <body class="index-page" dir="rtl" >
+  
 
   <header id="header" class="header d-flex align-items-center sticky-top" dir="ltr">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -39,8 +40,10 @@
       </a>
       
       <a class="btn-getstarted" href="English/index.html">English</a>
+      
 
       <nav id="navmenu" class="navmenu">
+        
         <ul>
           
           <li><a href="#contact">تواصل معنا</a></li>
@@ -51,6 +54,16 @@
       
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+        <div class="toggle">
+          <input type="checkbox" id="toggleBtn" />
+          <label for="toggleBtn">
+            <span class="toggle-icon">
+              <img src="assets/img/sun.svg" alt="sun icon" class="icon sun" />
+              <img src="assets/img/moon.svg" alt="moon icon" class="icon moon" />
+            </span>
+          </label>
+        </div>
   
       </nav>
     
@@ -438,12 +451,25 @@
 
   </footer>
 
-  <!-- <div class="chatingo">
-    <div class="chat-item">
-    <a href="#"id="toggle"><i class="bi bi-brightness-high"></i></a>
-    </div>
-  </div> -->
+ 
 
+  <script>
+    let toggleBtn = document.querySelector("#toggleBtn");
+
+    let bodyEl = document.querySelector("body");
+
+    let darkMode = false;
+
+    toggleBtn.addEventListener('change', (event) => {
+      darkMode = event.target.checked;
+      if(darkMode) {
+        bodyEl.classList.add("dark");
+      } else {
+        bodyEl.classList.remove("dark");
+      }
+    })
+
+  </script>
 
   <div class="chating">
     <div class="chat-item">

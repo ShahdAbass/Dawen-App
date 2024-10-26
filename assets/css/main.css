@@ -27,12 +27,12 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
+/* .light-background {
   --background-color: #f2f5fb;
   --surface-color: #ffffff;
-}
+} */
 
-.dark-background {
+.dark{
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
@@ -1481,20 +1481,23 @@ i.fa.fa-envelope {
 
 
 
-
+/* ------------------ */
 
 .toggle {
   position: fixed;
   top: 30px;
   left: 30px;
-
   width: 150px;
   height: 70px;
   border-radius: 50px;
   border: 0.1px solid var(--light-color);
   background-color: var(--bg-color);
-  box-shadow: inset 10px 10px 15px var(--darker-color),
-    inset -10px -10px 15px var(--light-color);
+  box-shadow: inset 10px 10px 15px var(--darker-color),              
+  inset -10px -10px 15px var(--light-color);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .toggle label {
@@ -1505,22 +1508,30 @@ i.fa.fa-envelope {
   top: 0;
   left: 0;
   pointer-events: none;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
 .toggle-icon {
-  background-image: url("imgs/sun.svg");
-  width: 50px;
-  height: 50px;
-  margin: 10px;
+  background-image: url("assets/img/sun.svg");
+  width: 30px;
+  height: 30px;
+  margin: 5px;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 50px;
   pointer-events: none;
   position: relative;
   transition: var(--transition-all);
-
-  box-shadow: 
-    /* offset */ 0px 0px 0px 3px var(--bg-color),
-    /*bottom right */ 4px 4px 7px var(--darker-color),
-    /* top left */ -4px -4px 7px var(--light-color);
+  box-shadow:     /* offset */ 0px 0px 0px 3px var(--bg-color),    /*bottom right */ 4px 4px 7px var(--darker-color),    /* top left */ -4px -4px 7px var(--light-color);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: var(--transition-all);
+  -moz-transition: var(--transition-all);
+  -ms-transition: var(--transition-all);
+  -o-transition: var(--transition-all);
 }
 
 .toggle-icon .icon {
@@ -1552,4 +1563,3 @@ i.fa.fa-envelope {
 .toggle input:checked + label .icon.sun {
   opacity: 0;
 }
-
